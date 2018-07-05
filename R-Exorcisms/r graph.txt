@@ -1,0 +1,81 @@
+
+R version 3.5.0 (2018-04-23) -- "Joy in Playing"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7521) x86_64-apple-darwin15.6.0]
+
+[Workspace restored from /Users/seyib/.RData]
+[History restored from /Users/seyib/.Rapp.history]
+
+> plot(1,1, type='n', xlim=c(550,0)), ylim = c(-2, 12), xlab = "Geologic Time", ylab= 'Biovolume')
+Error: unexpected ',' in "plot(1,1, type='n', xlim=c(550,0)),"
+> plot(1,1, type='n', xlim=c(550,0), ylim = c(-2, 12), xlab = "Geologic Time", ylab= 'Biovolume')
+> plot(as(sizeData, "matrix"), type='n', xlim=c(550,0), ylim = c(-2, 12), xlab = "Geologic Time", ylab= 'Biovolume')
+Error in .class1(object) : object 'sizeData' not found
+> sizeData
+Error: object 'sizeData' not found
+> sizeData <- read.delim(file='supplementary_data_file.txt')
+> 
+> timescale <- read.delim(file='timescale.txt')
+> plot(as(sizeData, "matrix"), type='n', xlim=c(550,0), ylim = c(-2, 12), xlab = "Geologic Time", ylab= 'Biovolume')
+Warning message:
+In xy.coords(x, y, xlabel, ylabel, log) : NAs introduced by coercion
+> plot(1,1, type='n', xlim=c(550,0), ylim = c(-2, 12), xlab = "Geologic Time", ylab= 'Biovolume')
+> head(timescale)
+  int_id      interval_name abbrev age_top age_bottom int_type
+1      3           Holocene     NA  0.0000     0.0117    epoch
+2    492   Late Pleistocene     NA  0.0117     0.1260      age
+3    502 Middle Pleistocene     NA  0.1260     0.7810      age
+4    276          Calabrian     NA  0.7810     1.8060      age
+5    219           Gelasian     NA  1.8060     2.5880      age
+6     11         Piacenzian     NA  2.5880     3.6000      age
+             timescales   color age_mid
+1 international ages--1 #FEF2E0 0.00585
+2 international ages--1 #FFF2C7 0.06885
+3 international ages--1 #FFF2C7 0.45350
+4 international ages--1 #FFF2C7 1.29350
+5 international ages--1 #FFEDB3 2.19700
+6 international ages--1 #FFFFBF 3.09400
+> r <- as(head(sizeData),vector)
+Error in is(object, Class) : 
+  trying to get slot "className" from an object of a basic class ("function") with no slots
+> head(sizeData)
+  PaleoDB_taxon_no    taxon_name   phylum          class          order family
+1            35826     Analectis Chordata Actinopterygii Lampridiformes       
+2            35827     Ateleopus Chordata Actinopterygii Lampridiformes       
+3            35828   Bajaichthys Chordata Actinopterygii Lampridiformes       
+4            35832       Lampris Chordata Actinopterygii Lampridiformes       
+5            35834 Protolophotus Chordata Actinopterygii Lampridiformes       
+6            35835      Turkmene Chordata Actinopterygii Lampridiformes       
+    fad_int fad_age   lad_int lad_age size_ref range_ref log10_volume
+1  Rupelian   33.90  Rupelian    28.1       58        24     3.208431
+2  Langhian   15.97  Holocene     0.0      100        24     6.879592
+3  Lutetian   47.80 Bartonian    38.0       58        24     2.930213
+4 Tortonian   11.62  Holocene     0.0      100        24     8.406058
+5  Rupelian   33.90  Holocene     0.0       58        24     5.861935
+6 Thanetian   59.20 Thanetian    56.0       58        24     4.191489
+  log10_max_length
+1         1.698970
+2         2.977724
+3         1.602060
+4         3.301030
+5         2.623249
+6         2.041393
+> "ts"
+[1] "ts"
+> 
