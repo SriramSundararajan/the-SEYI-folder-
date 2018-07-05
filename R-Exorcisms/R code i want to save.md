@@ -1,0 +1,10 @@
+> suspensionFeeding <- subset(bodySize, feeding ==1)
+> depositFeeding <- subset(bodySise, feeding ==2)
+Error in subset(bodySise, feeding == 2) : object 'bodySise' not found
+> depositFeeding <- subset(bodySize, feeding ==2)
+> miningFeeding <- subset(bodySize, feeding ==3)
+> grazingFeeding <- subset(bodySize, feeding ==3)
+> predatoryFeeding <- subset(bodySize, feeding ==4)
+> grazingFeeding <- subset(bodySize, feeding ==4)
+> predatoryFeeding <- subset(bodySize, feeding ==5)
+> otherFeeding <- subset(bodySize, feeding ==6)
